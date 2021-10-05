@@ -1,6 +1,10 @@
 # CBS #
 INTRODUCTION\
-Niger State Central Billing System (CBS) web service platform 
+The objective of this document is to define the platform for interaction between the 
+Central Billing System (CBS) web service platform and third-party platforms 
+for the purpose of carrying out specific processes. The communication mode is via REST 
+web service and is accessible via the URL (to be provided)
+
 
 ## Create Invoice ##
 This web service call will be used by the integrating system to create an invoice in CBS;
@@ -39,7 +43,6 @@ Property      | Description                                             | Data F
 TaxEntity     | Tax entity object                                       | [object](#taxentity)                | Y           |
 Amount        | Amount to be generated. Some revenue heads allow tax payers to <br/> input the amount to be paid for, while some have a fixed amount. For cases where an mount is required, this value must be set to be greater than 0.00. for cases where the amount is fixed, if an amount is supplied, the supplied amount is used for invoice generation                                                                         | `numeric`                           | Y           |
 InvoiceDescription        | Invoice Description                         | `string`                            | N           |
-AdditionalDetails         | Additional details based on form rules      | `string`                            | N           |
 CategoryId                | Category Id                                 | `numeric`                           | Y           |
 
 <div id="taxentity"></div>
@@ -67,11 +70,10 @@ PayerId         | Payer Id   | `string` | Y |
  "PhoneNumber": "0804832361",
  "TaxPayerIdentificationNumber": "7777711",
  "RCNumber": null,
- "PayerId": null,
+ "PayerId": null
  },
  "Amount": 8903,
  "InvoiceDescription": "Invoice Description here",
- "AdditionalDetails": {[]},
  "CategoryId": 1
  },
  "ExternalRefNumber": null,
