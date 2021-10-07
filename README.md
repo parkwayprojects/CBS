@@ -10,4 +10,7 @@ web service and is accessible via the URL (to be provided)
 ## [Create Invoice](https://github.com/parkwayprojects/CBS/wiki/Invoice-Generation) ##
 * This web service call will be used by the integrating system to create an invoice in CBS;
 
+## [Synchronization](https://github.com/parkwayprojects/CBS/wiki/Synchronization) ##
+* This web service call will be used by CBS to notify the integrating system of payment against an invoice;
+
 
